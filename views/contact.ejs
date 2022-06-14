@@ -1,0 +1,20 @@
+<%- include('layout_top') %>
+<form action="/submit" method="POST">
+    
+    <!-- Add CSRF token here -->
+    <input name="_csrf" type="hidden" value="<%- csrfToken %>" >
+    <label for="fname">First Name</label>
+    <input style="width:100%" type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input style="width:100%"  type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+
+    <label for="subject">Subject</label>
+    <textarea style="width:100%"  id="subject" name="subject" placeholder="Write something.."></textarea>
+
+    <div>
+      <input style="width:100%" type="submit" value="Submit">
+    </div>
+  </form>
+  <%- include('layout_bottom') %>
